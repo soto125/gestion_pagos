@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Pagos - ParkApp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button id="back">&larr; Atrás</button>
+    <h2>Cantidad</h2>
+  </header>
+
+  <main>
+    <input type="number" id="monto" placeholder="Ingrese el monto" />
+
+    <a href="#" id="add-method">Añadir método de pago</a>
+
+    <h3>Seleccione método de pago</h3>
+    <div id="metodos">
+      <label class="metodo">
+        <input type="radio" name="metodo" value="Nequi" />
+        <span>💳 Nequi **** 8970 <small>Expira: 12/26</small></span>
+      </label>
+
+      <label class="metodo">
+        <input type="radio" name="metodo" value="Daviplata" />
+        <span>💳 Daviplata **** 8970 <small>Expira: 12/26</small></span>
+      </label>
+
+      <label class="metodo">
+        <input type="radio" name="metodo" value="PayPal" />
+        <span>💳 PayPal mailaddress@mail.com <small>Expira: 12/26</small></span>
+      </label>
+
+      <label class="metodo">
+        <input type="radio" name="metodo" value="Efectivo" />
+        <span>💵 Efectivo <small>Expira: 12/26</small></span>
+      </label>
+    </div>
+
+    <button id="confirmar">Confirmar</button>
+  </main>
+
+  <div id="modal" class="oculto">
+    <div class="modal-content">
+      <div class="check">✔️</div>
+      <h3>Pago exitoso</h3>
+      <p>Tu dinero ha sido enviado exitosamente a ZonaSegura</p>
+      <h2 id="cantidadPagada"></h2>
+      <p>¿Cómo es tu viaje?</p>
+      <p><small>Su comentario nos ayudará a mejorar la experiencia.</small></p>
+      <button id="comentar">Por favor, deje un comentario</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
